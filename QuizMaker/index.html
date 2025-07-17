@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Online Quiz Maker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="temp_style_patch_1.css">
+
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <header class="header">
+        <div class="container">
+            <h1>Online Quiz Maker</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" id="home-link">Home</a></li>
+                    <li><a href="#" id="create-quiz-link">Create Quiz</a></li>
+                    <li><a href="#" id="take-quiz-link">Take Quiz</a></li>
+                    <li><a href="#" id="login-link">Login</a></li>
+                    <li><a href="#" id="register-link">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home-section" class="active-section">
+            <div class="container container2">
+                <h2>Welcome to the Online Quiz Maker!</h2>
+                <p>Create your own quizzes or take quizzes created by others.</p>
+            </div>
+        </section>
+
+        <section id="create-quiz-section" class="hidden-section">
+            <div class="container">
+                <h2 style="color: #3A4B4A;">Create a New Quiz</h2>
+                <form id="create-quiz-form">
+                    <div id="questions-container">
+                        <!-- Questions will be added here dynamically -->
+                    </div>
+                    <button type="button" id="add-question-btn">Add Question</button>
+                    <button type="submit">Save Quiz</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="take-quiz-section" class="hidden-section">
+            <div class="container container2">
+                <h2>Available Quizzes</h2>
+                <ul id="quiz-list" style="list-style-type:none; padding-left: 0;">
+                    <!-- List of quizzes will be populated here -->
+                </ul>
+                <div id="quiz-take-container" class="hidden-section">
+                    <h3 id="quiz-title"></h3>
+                    <form id="quiz-form">
+                        <!-- Quiz questions will be shown here -->
+                    </form>
+                    <button id="submit-quiz-btn" class="hidden-section">Submit Quiz</button>
+                </div>
+                <div id="quiz-results" class="hidden-section">
+                    <h3>Quiz Results</h3>
+                    <p id="score"></p>
+                    <ul id="correct-answers-list"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="login-section" class="hidden-section">
+            <div class="container">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <input type="email" id="login-email" placeholder="Email" required />
+                    <input type="password" id="login-password" placeholder="Password" required />
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="register-section" class="hidden-section">
+            <div class="container">
+                <h2>Register</h2>
+                <form id="register-form">
+                    <input type="text" id="register-username" placeholder="Username" required />
+                    <input type="email" id="register-email" placeholder="Email" required />
+                    <input type="password" id="register-password" placeholder="Password" required />
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="temp_patch_app_js_part1.js"></script>
+</body>
+
+</html>
